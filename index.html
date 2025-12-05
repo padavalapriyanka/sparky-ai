@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sparky | Ignite Your Customer Support</title>
+
+    <!-- Tailwind CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Local styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#f97316',
+              secondary: '#f59e0b',
+              accent: '#ef4444',
+              dark: '#0f172a',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="text-slate-700 antialiased bg-white selection:bg-orange-100 selection:text-orange-600">
+
+  <!-- Navigation (same as your file) -->
+  <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+          <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-orange-500/30">
+            <img src="assets/logo.svg" alt="Sparky logo" class="w-6 h-6">
+          </div>
+          <span class="font-black text-2xl text-dark tracking-tight">Sparky</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#features" class="text-slate-600 hover:text-primary font-medium">Features</a>
+          <a href="#integration" class="text-slate-600 hover:text-primary font-medium">Integration</a>
+          <a href="#pricing" class="text-slate-600 hover:text-primary font-medium">Pricing</a>
+          <a href="#testimonials" class="text-slate-600 hover:text-primary font-medium">Reviews</a>
+          <a href="#contact" class="px-6 py-2.5 bg-dark text-white font-bold rounded-full hover:bg-orange-600 transition shadow-lg">Get Started</a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-slate-600 focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full shadow-xl">
+      <div class="px-4 pt-2 pb-4 space-y-2">
+        <a href="#features" class="block px-4 py-3 text-slate-600 hover:bg-orange-50 rounded-lg font-medium">Features</a>
+        <a href="#integration" class="block px-4 py-3 text-slate-600 hover:bg-orange-50 rounded-lg font-medium">Integration</a>
+        <a href="#pricing" class="block px-4 py-3 text-slate-600 hover:bg-orange-50 rounded-lg font-medium">Pricing</a>
+        <a href="#testimonials" class="block px-4 py-3 text-slate-600 hover:bg-orange-50 rounded-lg font-medium">Reviews</a>
+        <a href="#contact" class="block px-4 py-3 text-primary font-bold">Get Started Free</a>
+      </div>
+    </div>
+  </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-gradient-to-b from-orange-50/50 to-white">
+        <!-- Adjusted blobs to Warm colors -->
+        <div class="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#fff7ed_100%)]"></div>
+        
+        <div class="absolute top-20 left-10 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute top-40 right-10 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-20 left-1/2 w-96 h-96 bg-red-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style="animation-delay: 4s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-100 text-orange-700 text-sm font-bold mb-8 border border-orange-200">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                        </span>
+                        v2.0 is Live: Faster & Smarter
+                    </div>
+                    
+                    <h1 class="text-6xl lg:text-7xl xl:text-8xl font-black text-dark leading-tight mb-8">
+                        Ignite Smarter
+                        <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 gradient-animate">Conversations</span>
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl text-slate-600 mb-10 leading-relaxed max-w-2xl">
+                        Sparky turns your data into an intelligent chatbot in seconds. Engage customers, automate support, and light up your sales pipeline.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-5 mb-12">
+                        <button class="group px-10 py-5 bg-gradient-to-r from-orange-600 to-amber-500 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition transform hover:-translate-y-1">
+                            Spark Your Growth
+                            <i class="fa-solid fa-bolt ml-2 group-hover:rotate-12 transition"></i>
+                        </button>
+                        <button class="px-10 py-5 bg-white text-dark border-2 border-slate-200 rounded-2xl font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition flex items-center justify-center gap-3 shadow-lg transform hover:-translate-y-1">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-play text-orange-600 text-xs"></i>
+                            </div>
+                            See It In Action
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center gap-8 text-sm text-slate-500">
+                        <span class="font-semibold text-base text-slate-400">Powering:</span>
+                        <div class="flex gap-6 opacity-50 grayscale hover:grayscale-0 transition duration-500">
+                            <i class="fa-brands fa-shopify text-3xl hover:text-green-600"></i>
+                            <i class="fa-brands fa-wordpress text-3xl hover:text-blue-600"></i>
+                            <i class="fa-brands fa-slack text-3xl hover:text-purple-600"></i>
+                            <i class="fa-brands fa-discord text-3xl hover:text-indigo-500"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                    <!-- Adjusted Code Window colors -->
+                    <div class="code-window p-8 text-base font-mono text-gray-300 float-animation">
+                        <div class="flex gap-2 mb-6">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="space-y-2.5 text-sm">
+                            <p><span class="text-purple-400">import</span> { <span class="text-yellow-400">Sparky</span> } <span class="text-purple-400">from</span> <span class="text-green-400">'@sparky-ai/core'</span>;</p>
+                            <br>
+                            <p><span class="text-gray-500">// Initialize your energetic bot</span></p>
+                            <p><span class="text-purple-400">const</span> <span class="text-blue-400">bot</span> = <span class="text-yellow-400">new</span> <span class="text-yellow-300">Sparky</span>({</p>
+                            <p class="pl-6">apiKey: <span class="text-orange-400">"sp_live_99..."</span>,</p>
+                            <p class="pl-6">energyLevel: <span class="text-orange-400">"high"</span>,</p>
+                            <p class="pl-6">integrations: [<span class="text-orange-400">"slack"</span>, <span class="text-orange-400">"web"</span>]</p>
+                            <p>});</p>
+                            <br>
+                            <p><span class="text-gray-500">// Ignite the engine</span></p>
+                            <p><span class="text-purple-400">await</span> bot.<span class="text-blue-300">ignite</span>({</p>
+                            <p class="pl-6">knowledgeBase: <span class="text-orange-400">"./company-data"</span></p>
+                            <p>});</p>
+                            <br>
+                            <p><span class="text-green-400">console</span>.log(<span class="text-orange-400">"Sparky is live! ⚡"</span>);</p>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 flex items-center gap-4 hover:scale-105 transition cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="bg-gradient-to-br from-green-400 to-emerald-600 p-4 rounded-2xl text-white shadow-lg shadow-green-500/30">
+                            <i class="fa-solid fa-gauge-high text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Response Time</p>
+                            <p class="font-black text-dark text-2xl">0.02s</p>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -top-8 -right-8 bg-gradient-to-br from-orange-500 to-red-500 p-6 rounded-2xl shadow-2xl text-white hover:scale-105 transition cursor-pointer" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="text-center">
+                            <p class="text-4xl font-black mb-1">10M+</p>
+                            <p class="text-sm font-semibold opacity-90">Sparks Generated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-dark text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-5xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">99%</p>
+                    <p class="text-slate-400 font-medium">Resolution Rate</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-5xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">120+</p>
+                    <p class="text-slate-400 font-medium">Languages Spoken</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <p class="text-5xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">10k+</p>
+                    <p class="text-slate-400 font-medium">Happy Teams</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <p class="text-5xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">24/7</p>
+                    <p class="text-slate-400 font-medium">Always On</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gradient-to-b from-white to-orange-50/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-wide uppercase text-sm mb-3 inline-block">The Sparky Advantage</span>
+                <h2 class="text-5xl md:text-6xl font-black text-dark mb-4">Electric Capabilities</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto">Everything you need to energize your customer experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards updated with warm hover borders and icons -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 hover-lift group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Smart Context</h3>
+                    <p class="text-slate-600 leading-relaxed">Sparky remembers past conversations and user details, providing a seamless, personalized experience every time.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 hover-lift group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-yellow-600 text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Flash Deployment</h3>
+                    <p class="text-slate-600 leading-relaxed">Upload a PDF or URL. Sparky digests the info and is ready to chat in under 60 seconds. Speed is our currency.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 hover-lift group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center text-red-600 text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Hot Insights</h3>
+                    <p class="text-slate-600 leading-relaxed">See what your customers are asking about most. Spot trends before they become problems with our heatmaps.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 hover-lift group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Global Speak</h3>
+                    <p class="text-slate-600 leading-relaxed">Sparky speaks 100+ languages fluently. Expand your market reach without hiring a global support team.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 hover-lift group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Ironclad Security</h3>
+                    <p class="text-slate-600 leading-relaxed">Your data is encrypted at rest and in transit. We are GDPR compliant and SOC2 certified.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 hover-lift group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Power Integrations</h3>
+                    <p class="text-slate-600 leading-relaxed">Connect Sparky to Zapier, Slack, Salesforce, and HubSpot. Automate workflows directly from chat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section id="integration" class="py-24 bg-dark text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-orange-500 rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-red-500 rounded-full filter blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-orange-400 font-bold tracking-wide uppercase text-sm mb-4 inline-block">Developer Friendly</span>
+                    <h2 class="text-5xl font-black mb-8 leading-tight">Code that sparks joy</h2>
+                    <p class="text-slate-300 mb-10 text-xl leading-relaxed">
+                        Our API is designed for speed and simplicity. Integrate full conversational AI capabilities into your app in minutes.
+                    </p>
+                    
+                    <ul class="space-y-5 mb-10">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-bolt text-orange-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg mb-1">Ultra-Low Latency</p>
+                                <p class="text-slate-400">Real-time streaming responses via WebSocket</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-code text-orange-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg mb-1">Type-Safe SDKs</p>
+                                <p class="text-slate-400">Full TypeScript support + Python, Go & Rust</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="inline-flex items-center gap-3 text-orange-400 hover:text-orange-300 font-bold text-lg transition group">
+                        Explore the API Docs 
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i>
+                    </a>
+                </div>
+
+                <div class="bg-[#151515] rounded-2xl p-6 font-mono text-sm border border-slate-800 shadow-2xl" data-aos="fade-left">
+                    <div class="flex justify-between items-center mb-6 border-b border-slate-800 pb-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-terminal text-orange-500"></i>
+                            <span class="text-slate-400 font-semibold">bash</span>
+                        </div>
+                        <span class="text-xs text-slate-500 bg-slate-900 px-3 py-1 rounded-full">admin@sparky:~</span>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-green-400">$ npm install sparky-ai</p>
+                        <p class="text-slate-400">Adding sparky-ai...</p>
+                        <p class="text-orange-400 flex items-center gap-2">
+                            <i class="fa-solid fa-check"></i>
+                            Installed v2.4.1 in 350ms
+                        </p>
+                        <br>
+                        <p class="text-green-400">$ sparky train --source="./docs"</p>
+                        <p class="text-slate-400">Ingesting 45 files...</p>
+                        <p class="text-slate-400">Vectorizing content...</p>
+                        <p class="text-yellow-400 flex items-center gap-2">
+                            <i class="fa-solid fa-bolt"></i>
+                            Training complete! Model ready.
+                        </p>
+                        <br>
+                        <p class="text-green-400">$ sparky launch</p>
+                        <p class="text-cyan-400">🚀 Sparky is active at localhost:3000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-wide uppercase text-sm mb-3 inline-block">Simple Process</span>
+                <h2 class="text-5xl font-black text-dark mb-4">Light it up in 3 Steps</h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto">Go from zero to fully functional AI agent in minutes.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 relative">
+                <!-- Connected line -->
+                <div class="hidden md:block absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-orange-200 via-yellow-200 to-red-200 -z-10"></div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-white p-10 rounded-3xl border-2 border-orange-100 hover-lift" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-32 h-32 bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-3xl flex items-center justify-center text-5xl font-black mx-auto mb-8 shadow-xl shadow-orange-500/30">
+                        1
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Fuel the Data</h3>
+                    <p class="text-slate-600 text-center leading-relaxed">Import from website URLs, notion pages, PDFs, or raw text. We handle the formatting.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-yellow-50 to-white p-10 rounded-3xl border-2 border-yellow-100 hover-lift" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-32 h-32 bg-gradient-to-br from-yellow-400 to-amber-500 text-white rounded-3xl flex items-center justify-center text-5xl font-black mx-auto mb-8 shadow-xl shadow-yellow-500/30">
+                        2
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Tune the Vibe</h3>
+                    <p class="text-slate-600 text-center leading-relaxed">Set the personality. Professional? Playful? Sarcastic? Customize colors to match your brand.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-red-50 to-white p-10 rounded-3xl border-2 border-red-100 hover-lift" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-32 h-32 bg-gradient-to-br from-red-500 to-rose-600 text-white rounded-3xl flex items-center justify-center text-5xl font-black mx-auto mb-8 shadow-xl shadow-red-500/30">
+                        3
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Ignite</h3>
+                    <p class="text-slate-600 text-center leading-relaxed">Copy the embed snippet and paste it into your site's header. You are now live.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-gradient-to-b from-orange-50/50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-wide uppercase text-sm mb-3 inline-block">Pricing</span>
+                <h2 class="text-5xl font-black text-dark mb-4">Plans that fit your energy</h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto">Transparent pricing. No hidden fees. Cancel anytime.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Ember Plan -->
+                <div class="bg-white p-10 rounded-3xl border-2 border-slate-100 hover:border-orange-300 pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Ember</h3>
+                        <p class="text-slate-600">For side projects</p>
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-5xl font-black">$0</span>
+                        <span class="text-slate-600">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>100 messages/mo</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>1 Sparky bot</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>Basic support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 bg-slate-100 text-dark font-bold rounded-xl hover:bg-slate-200 transition">
+                        Start Free
+                    </button>
+                </div>
+
+                <!-- Blaze Plan -->
+                <div class="bg-gradient-to-br from-orange-600 to-red-600 p-10 rounded-3xl text-white relative pricing-card shadow-2xl shadow-orange-500/40 transform scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-white text-orange-600 px-6 py-2 rounded-full text-sm font-bold shadow-lg border border-orange-100">
+                        <i class="fa-solid fa-fire mr-1"></i> MOST POPULAR
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Blaze</h3>
+                        <p class="text-orange-100">For startups & growth</p>
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-5xl font-black">$49</span>
+                        <span class="text-orange-100">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-bolt text-yellow-300"></i>
+                            <span>5,000 messages/mo</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-bolt text-yellow-300"></i>
+                            <span>5 Sparky bots</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-bolt text-yellow-300"></i>
+                            <span>Remove branding</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-bolt text-yellow-300"></i>
+                            <span>Priority email support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-orange-50 transition shadow-xl">
+                        Get Blazing
+                    </button>
+                </div>
+
+                <!-- Inferno Plan -->
+                <div class="bg-white p-10 rounded-3xl border-2 border-slate-100 hover:border-purple-300 pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Inferno</h3>
+                        <p class="text-slate-600">For enterprise scale</p>
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-5xl font-black">Custom</span>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>Unlimited messages</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>Dedicated servers</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>SLA Guarantees</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span>Dedicated Success Manager</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 bg-dark text-white font-bold rounded-xl hover:shadow-xl transition">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-wide uppercase text-sm mb-3 inline-block">Reviews</span>
+                <h2 class="text-5xl font-black text-dark mb-4">Users are buzzing</h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto">Don't just take our word for it.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl transition border border-transparent hover:border-orange-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 mb-6">
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6 leading-relaxed italic">"Sparky lives up to its name. It's incredibly fast and the responses feel energetic and human. Our customers love it."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full text-white flex items-center justify-center font-bold">SJ</div>
+                        <div>
+                            <p class="font-bold">Sarah Johnson</p>
+                            <p class="text-sm text-slate-500">VP of Sales, TechFlow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl transition border border-transparent hover:border-orange-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 mb-6">
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6 leading-relaxed italic">"I've used other AI bots that were sluggish. Sparky was set up in 5 minutes and the training process was instant."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full text-white flex items-center justify-center font-bold">MC</div>
+                        <div>
+                            <p class="font-bold">Mike Chen</p>
+                            <p class="text-sm text-slate-500">Founder, StartUp Inc</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl transition border border-transparent hover:border-orange-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-1 mb-6">
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                        <i class="fa-solid fa-star text-orange-400"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6 leading-relaxed italic">"The customizability is insane. We made Sparky sound exactly like our brand voice - witty and helpful."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full text-white flex items-center justify-center font-bold">ER</div>
+                        <div>
+                            <p class="font-bold">Emily Rodriguez</p>
+                            <p class="text-sm text-slate-500">Marketing Lead</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-orange-600 via-red-600 to-purple-600 rounded-[3rem] p-12 md:p-20 text-center text-white shadow-2xl shadow-orange-500/30 relative overflow-hidden" data-aos="zoom-in">
+                <!-- Adjusted CTA glow effects -->
+                <div class="absolute top-0 left-0 w-96 h-96 bg-yellow-400 opacity-20 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+                <div class="absolute bottom-0 right-0 w-80 h-80 bg-orange-400 opacity-20 rounded-full translate-x-1/3 translate-y-1/3 animate-pulse" style="animation-delay: 1s;"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight">Ready to ignite your sales?</h2>
+                    <p class="text-orange-100 text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
+                        Join 10,000+ companies using Sparky to automate support and delight customers around the clock.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <button class="px-10 py-5 bg-white text-red-600 rounded-2xl font-bold text-lg hover:bg-gray-100 transition shadow-2xl transform hover:-translate-y-1">
+                            Start 14-Day Free Trial
+                        </button>
+                        <button class="px-10 py-5 bg-transparent border-2 border-white text-white rounded-2xl font-bold text-lg hover:bg-white/20 transition transform hover:-translate-y-1">
+                            Book a Demo
+                        </button>
+                    </div>
+                    <p class="text-sm text-orange-200 mt-8">No credit card required • Cancel anytime • 60 seconds to deploy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  <div id="chat-widget" class="fixed bottom-6 right-6 w-80 md:w-96 z-50">
+    <div id="chat-header" class="bg-gradient-to-br from-orange-600 to-red-500 text-white rounded-2xl p-3 cursor-pointer flex items-center justify-between shadow-2xl">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.svg" alt="logo" class="w-8 h-8">
+        <div>
+          <div class="font-bold">Sparky Bot</div>
+          <div class="text-xs opacity-80">Ask me anything</div>
+        </div>
+      </div>
+      <div id="chat-toggle">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+
+    <div id="chat-body" class="hidden bg-white rounded-2xl shadow-xl mt-3 p-3 max-h-96 overflow-y-auto">
+      <div id="messages" class="space-y-3 text-sm"></div>
+
+      <form id="chat-form" class="mt-3 flex gap-2">
+        <input id="chat-input" class="flex-1 rounded-lg border border-slate-200 px-3 py-2 focus:outline-none" placeholder="Type your question..." />
+        <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-lg">Send</button>
+      </form>
+    </div>
+  </div>
+  <footer class="bg-dark text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-6 text-white">
+                        <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-bolt text-white text-xl"></i>
+                        </div>
+                        <span class="font-bold text-2xl">Sparky</span>
+                    </div>
+                    <p class="text-base max-w-xs mb-6 leading-relaxed">
+                        The fastest way to add intelligence to your application. Spark conversations that convert.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-blue-400 hover:text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-600 hover:text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-blue-700 hover:text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-orange-400 transition">Features</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">API Docs</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Showcase</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-orange-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-orange-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2024 Sparky Inc. All rights reserved.</p>
+                <p class="mt-4 md:mt-0">Built with <span class="text-orange-500">⚡</span> energy.</p>
+            </div>
+        </div>
+    </footer>
+  <!-- Footer, scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    AOS.init({ once: true, offset: 120, duration: 800 });
+
+    // Mobile Menu Toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn) btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) navbar.classList.add('shadow-lg'); else navbar.classList.remove('shadow-lg');
+    });
+  </script>
+</body>
+</html>
